@@ -9,7 +9,8 @@
       "it": false,
       "beforeEach": false,
       "afterEach": false,
-      "context": false
+      "context": false,
+      "document": false
     },
     "rules": {
       "comma-dangle": ["error", "never"]
