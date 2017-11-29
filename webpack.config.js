@@ -13,13 +13,15 @@ module.exports = {
   devServer: {
     contentBase: path.resolve(__dirname, './example')
   },
-  modules: [
-    {
-      test: /\.js$/,
-      exclude: /node_modules/,
-      use: [{
-        loader: 'babel-loader'
-      }]
-    }
-  ]
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: [{
+          loader: 'babel-loader'
+        }]
+      }
+    ]
+  }
 };
