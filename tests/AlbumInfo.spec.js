@@ -9,13 +9,13 @@ describe('AlbumInfo', () => {
   });
 
   describe('renderAlbumInfo', () => {
-  const markup = `
+    const markup = `
     <img class="album-image" src="https://i.scdn.co/image/59a536f0bf0ddaa427e4c732a061c33fe7578757" alt="">
     <p class="album-title">The Essential Incubus</p>
     <p class="album-artist">Incubus</p>
     <p class="album-counter">13 Músicas</p>`;
 
-  const markup2 = `
+    const markup2 = `
     <img class="album-image" src="https://i.scdn.co/image/59a536f0bf0ddaa427e4c732a061c33fe7578757" alt="">
     <p class="album-title">The Essential Incubus aehoo</p>
     <p class="album-artist">Incubus aehoo</p>
@@ -82,5 +82,10 @@ describe('AlbumInfo', () => {
       renderAlbumInfo(data2, element2);
       expect(element2.innerHTML).to.be.eql(markup2);
     });
+
+    it('should return the data', () => {
+      const element = document.createElement('div');
+      expect(renderAlbumInfo(data, element)).to.be.eql(data);
+    })
   });
 });

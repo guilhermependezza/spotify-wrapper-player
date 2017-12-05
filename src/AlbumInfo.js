@@ -9,4 +9,5 @@ const createMarkup = data => `
 export default function renderAlbumInfo(data, el) {
   const markup = createMarkup(data);
   el.innerHTML = markup;
+  return data;
 }
