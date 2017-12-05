@@ -1,3 +1,5 @@
+/* eslint no-param-reassign: ["error", { "props": false }] */
+
 const createMarkup = data => data.map(track => `
   <div class="music" data-track-preview="${track.preview_url}">
     <p class="music-number">${track.track_number}</p>
