@@ -10,13 +10,13 @@ describe('AlbumInfo', () => {
 
   describe('renderAlbumInfo', () => {
   const markup = `
-    <img class="album-image" src="https://i.scdn.co/image/9d6866c93e476bd8e7aa7771f9b68db119e076c6" alt="">
+    <img class="album-image" src="https://i.scdn.co/image/59a536f0bf0ddaa427e4c732a061c33fe7578757" alt="">
     <p class="album-title">The Essential Incubus</p>
     <p class="album-artist">Incubus</p>
     <p class="album-counter">13 Músicas</p>`;
 
   const markup2 = `
-    <img class="album-image" src="https://i.scdn.co/image/9d6866c93e476bd8e7aa7771f9b68db119e076c6" alt="">
+    <img class="album-image" src="https://i.scdn.co/image/59a536f0bf0ddaa427e4c732a061c33fe7578757" alt="">
     <p class="album-title">The Essential Incubus aehoo</p>
     <p class="album-artist">Incubus aehoo</p>
     <p class="album-counter">10 Músicas</p>`;
@@ -42,9 +42,9 @@ describe('AlbumInfo', () => {
         width: 64
       }],
       name: 'The Essential Incubus',
-      tracks: [
-        {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}
-      ]
+      tracks: {
+        total: 13
+      }
     };
 
     const data2 = {
@@ -68,9 +68,9 @@ describe('AlbumInfo', () => {
         width: 64
       }],
       name: 'The Essential Incubus aehoo',
-      tracks: [
-        {}, {}, {}, {}, {}, {}, {}, {}, {}, {}
-      ]
+      tracks: {
+        total: 10
+      }
     };
 
     it('should render an album info correctly', () => {
